@@ -31,18 +31,18 @@
 				<section>
 					<h3>Skutki degradacji gleby:</h3>
 					<ul>
-						<li>obniżenie plonów</li>
-						<li>erozja gleby</li>
-						<li>utrata bioróżnorodności</li>
-						<li>zwiększenie ryzyka powodzi i suszy</li>
+						<li class="fragment">obniżenie plonów</li>
+						<li class="fragment">erozja gleby</li>
+						<li class="fragment">utrata bioróżnorodności</li>
+						<li class="fragment">zwiększenie ryzyka powodzi i suszy</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Główna przyczyna degradacji gleby - intensywne rolnictwo, czyli:</h3>
 					<ul>
-						<li>monokultury</li>
-						<li>nadmierne stosowanie nawozów i pestycydów</li>
-						<li>brak odpoczynku gleby</li>
+						<li class="fragment">monokultury</li>
+						<li class="fragment">nadmierne stosowanie nawozów i pestycydów</li>
+						<li class="fragment">brak odpoczynku gleby</li>
 					</ul>
 				</section>
 			</section>
@@ -124,26 +124,27 @@
 				<section>
 					<h3>Metody wykorzystania wody w rolnictwie</h3>
 					<ul>
-						<li>Podlewanie roślin</li>
-						<li>Pojenie zwierząt</li>
-						<li>Roztwarzanie nawozów i pestycydów</li>
-						<li>Utrzymywanie maszyn w czystości</li>
+						<li class="fragment">Podlewanie roślin</li>
+						<li class="fragment">Pojenie zwierząt</li>
+						<li class="fragment">Roztwarzanie nawozów i pestycydów</li>
+						<li class="fragment">Utrzymywanie maszyn w czystości</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Skutki nadmiernego wykorzystania wody w rolnictiwe</h3>
 					<ul>
-						<li>Obniżenie poziomu wód gruntowych</li>
-						<li>Niedostatek lub brak wody dla innych celów</li>
+						<li class="fragment">Obniżenie poziomu wód gruntowych</li>
+						<li class="fragment">Niedostatek lub brak wody dla innych celów</li>
 					</ul>
 				</section>
 				<section>
 					<h3>Metody ograniczenia zużycia wody w rolnictwie</h3>
 					<ul>
-						<li>Używanie wody deszczowej</li>
-						<li>Efektywne wykorzystanie wody</li>
-						<li>Używanie wody powierzchniowej</li>
-						<li>Odpowiedni dobór hodowanych odmian i gatunków do lokalnych warunków hydrologicznych</li>
+						<li class="fragment">Używanie wody deszczowej</li>
+						<li class="fragment">Efektywne wykorzystanie wody</li>
+						<li class="fragment">Używanie wody powierzchniowej</li>
+						<li class="fragment">Odpowiedni dobór hodowanych odmian i gatunków do lokalnych warunków hydrologicznych
+						</li>
 					</ul>
 				</section>
 			</section>
@@ -232,15 +233,23 @@
 						</g>
 					</svg>
 				</section>
+				<section>
+					<h3>Główne źródła emisji gazów cieplarnianych w rolnictwie</h3>
+					<ul>
+						<li class="fragment bgi-1">hodowla bydła
+						</li>
+						<li class="fragment bgi-2">maszyny rolnicze</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h3>Źródła</h3>
 				<ul>
 					<li>
-						<a href="https://www.europarl.europa.eu/news/pl/headlines/society/20180301STO98928/infografika-emisje-gazow-cieplarnianych-w-unii-europejskiej">Europal</a>
+						<a href="https://www.europarl.europa.eu/news/pl/headlines/society/20180301STO98928/infografika-emisje-gazow-cieplarnianych-w-unii-europejskiej" target="_blank">Europal</a>
 					</li>
 					<li>
-						<a href="https://www.wiadomoscihandlowe.pl/artykul/72-proc-zuzycia-wody-w-polsce-przypada-na-przemysl">Wiadomości Handlowe</a>
+						<a href="https://www.wiadomoscihandlowe.pl/artykul/72-proc-zuzycia-wody-w-polsce-przypada-na-przemysl" target="_blank">Wiadomości Handlowe</a>
 					</li>
 				</ul>
 			</section>
@@ -260,6 +269,15 @@
 
 			// Learn about plugins: https://revealjs.com/plugins/
 			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+
+		Reveal.addEventListener('fragmentshown', function (event) {
+			if (event.fragment.classList.contains("bgi-1")) {
+				Reveal.getCurrentSlide().setAttribute('data-background-image',
+					'https://i.ytimg.com/vi/ICM1Lral5fU/maxresdefault.jpg')
+			} else if (event.fragment.classList.contains("bgi-2")) {
+
+			}
 		});
 	</script>
 </body>
